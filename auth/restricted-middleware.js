@@ -9,7 +9,8 @@ module.exports = (req, res, next) => {
          if (err) {
             res.status(401).json({ message: "You're not supposed to be here" })
          } else {
-            req.decodedToken = decodedToken 
+            req.decodedToken = decodedToken
+            
             next()
          }
       })

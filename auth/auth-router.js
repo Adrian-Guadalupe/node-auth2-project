@@ -16,7 +16,7 @@ router.post('/register', (req, res) => {
          res.status(201).json(saved)
       })
       .catch(err => {
-         res.status(500).json({ message: 'There was an error saving this user to the database' }, err)
+         res.status(500).json({ message: 'There was an error saving this user to the database', err })
       })
 })
 
@@ -38,7 +38,7 @@ router.post('/login', (req, res) => {
          }
       })
       .catch(err => {
-         res.status(500).json({ message: 'There was an error logging in' }, err);
+         res.status(500).json({ message: 'There was an error logging in', err });
        });
 })
 
