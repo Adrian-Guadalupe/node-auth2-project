@@ -46,7 +46,8 @@ const createToken = (user) => {
    const payload = {
       subject: user.id,
       username: user.username,
-      department: user.department || 'user'
+      department: user.department,
+      role: user.role || 'user'
    }
 
    const options = {
